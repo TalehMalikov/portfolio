@@ -222,7 +222,7 @@ if (contactForm) {
 /* ── INIT ───────────────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
   const rows = document.querySelectorAll('.exp-row');
-  const defaultRow = rows[1] || rows[0]; // open Vanguard Senior (2nd row), fallback to first
+  const defaultRow = rows[2] || rows[0]; // open Software Engineer / SAMHI (3rd row), fallback to first
   if (defaultRow) { defaultRow.classList.add('open'); defaultRow.setAttribute('aria-expanded', 'true'); }
 });
 

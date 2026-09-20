@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://md-samad.com/sitemap.xml
+Sitemap: https://tmalikov.com/sitemap.xml
