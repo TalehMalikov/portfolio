@@ -103,10 +103,11 @@ function animateParticles() {
 
 /* ── TYPEWRITER ─────────────────────────────────────── */
 const TYPING_TEXT =
-  'MS Computer Science from UChicago. At Vanguard I delivered 99.999% uptime handling ' +
-  '100,000+ peak hourly logons and cut security incidents by 40% across a platform serving ' +
-  'millions of users. I build cloud-native infrastructure, secure IAM pipelines, and agentic ' +
-  'AI tools that reach production.';
+  'MS Computer Science at UChicago and a research assistant in the Human Computer ' +
+  'Integration Lab. Before that I spent three years on a national health insurance ' +
+  'platform, building clinical microservices for a HIMSS-certified national hospital ' +
+  'system. I build backend services, cloud infrastructure, and AI tools that reach ' +
+  'production.';
 
 function startTypewriter() {
   const el = document.getElementById('typing-text');
