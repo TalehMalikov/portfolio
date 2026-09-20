@@ -180,7 +180,7 @@ const sectionObs = new IntersectionObserver(entries => {
       });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0, rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('section[id]').forEach(s => sectionObs.observe(s));
 
 /* ── CONTACT FORM (Web3Forms) ───────────────────────── */

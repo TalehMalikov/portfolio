@@ -221,3 +221,14 @@ body { background-color: #ffffff; color: #2c2e2f; font-family: 'Inter', sans-ser
   .proj-footer     { padding-top: 10px; }
   .preview-overlay-text { font-size: 10px; padding: 5px 12px; }
 }
+
+/* Brand accent — red, used only for section eyebrows and the availability dot.
+   brand      #C4342B  on light backgrounds
+   brand-light #E8574B  on navy/dark backgrounds (keeps contrast) */
+.text-brand       { color: #C4342B; }
+.bg-brand         { background-color: #C4342B; }
+.text-brand-light { color: #E8574B; }
+.bg-brand-light   { background-color: #E8574B; }
+.border-brand\/40 { border-color: rgba(196, 52, 43, 0.4); }
+.hover\:bg-brand\/10:hover { background-color: rgba(196, 52, 43, 0.1); }
+.hover\:text-brand:hover { color: #C4342B; }
