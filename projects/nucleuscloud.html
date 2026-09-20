@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="NucleusCloud - Fully event-driven bioinformatics pipeline on AWS by Md Samad"/>
+<title>NucleusCloud | Md Samad</title>
+<link rel="canonical" href="https://md-samad.com/projects/nucleuscloud.html"/>
+<link rel="icon" href="../favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icon-32.png"/>
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"/>
+
+<link rel="stylesheet" href="../assets/css/tailwind.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/style.css"/>
+<link rel="stylesheet" href="../assets/css/detail.css"/>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant bg-surface/80 backdrop-blur-xl">
+  <div class="flex items-center h-16 px-4 sm:px-6 max-w-container mx-auto gap-3">
+    <a href="../index.html" class="font-syne text-base font-bold text-primary tracking-tight no-underline hover:opacity-80 transition-opacity duration-200 shrink-0">Md Samad</a>
+    <a href="../index.html" class="hidden sm:flex items-center gap-1.5 font-code text-xs text-on-surface-variant border border-outline-variant rounded-full px-3 py-1 hover:border-primary hover:text-primary transition-all duration-200 shrink-0">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Portfolio
+    </a>
+    <div class="flex-1"></div>
+    <nav class="hidden md:flex items-center gap-1 mr-2">
+      <a href="#architecture" class="font-code text-xs px-3 py-1.5 text-on-surface-variant hover:text-primary transition-colors duration-200 rounded-md hover:bg-surface-variant/30">Architecture</a>
+      <a href="#how-it-works" class="font-code text-xs px-3 py-1.5 text-on-surface-variant hover:text-primary transition-colors duration-200 rounded-md hover:bg-surface-variant/30">How it works</a>
+      <a href="#tech-stack" class="font-code text-xs px-3 py-1.5 text-on-surface-variant hover:text-primary transition-colors duration-200 rounded-md hover:bg-surface-variant/30">Technologies</a>
+    </nav>
+    <a href="https://github.com/samadmd786/nucleuscloud" target="_blank" rel="noopener"
+       class="bg-primary text-white px-4 py-2 rounded-lg font-code text-xs font-semibold hover:brightness-110 transition-all flex items-center gap-2 shrink-0">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      View GitHub
+    </a>
+  </div>
+</header>
+
+<main class="pt-16">
+
+  <!-- Hero -->
+  <section id="hero" class="border-b border-outline-variant px-4 sm:px-6 py-20 sm:py-32 relative overflow-hidden">
+    <div class="absolute pointer-events-none" style="width:700px;height:700px;top:-200px;left:-200px;background:radial-gradient(circle,rgba(52,211,153,0.09) 0%,transparent 65%);border-radius:50%"></div>
+    <div class="absolute pointer-events-none" style="width:500px;height:500px;top:0;right:-100px;background:radial-gradient(circle,rgba(0,48,135,0.05) 0%,transparent 65%);border-radius:50%"></div>
+    <div class="max-w-container mx-auto relative">
+      <div class="flex flex-wrap gap-2 mb-6 hero-in" style="animation-delay:0ms">
+        <span class="font-code text-[10px] font-bold uppercase px-2.5 py-1 rounded" style="background:rgba(0,156,222,0.1);color:#009cde">Cloud / AWS</span>
+        <span class="font-code text-[10px] font-bold uppercase px-2.5 py-1 rounded" style="background:rgba(0,48,135,0.1);color:#003087">Full-Stack</span>
+        <span class="font-code text-[10px] font-bold uppercase px-2.5 py-1 rounded" style="background:rgba(21,128,61,0.12);color:#15803d">Event-Driven</span>
+        <span class="font-code text-[10px] font-bold uppercase px-2.5 py-1 rounded" style="background:rgba(251,191,36,0.12);color:#fbbf24">Bioinformatics</span>
+      </div>
+      <h1 class="font-syne text-[44px] sm:text-[72px] font-extrabold leading-[1.05] mb-5 hero-in" style="animation-delay:90ms">NucleusCloud</h1>
+      <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed max-w-2xl mb-8 hero-in" style="animation-delay:190ms">
+        Cloud-native bioinformatics VCF variant processing pipeline on AWS. Accepts genomic VCF files via presigned S3 upload, processes them asynchronously through SQS/SNS-driven microservices, tiers cold storage to Glacier based on subscription level, and emails results via SES - all behind Globus Auth and Stripe billing. Entire stack deployed from a single CloudFormation template.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10 hero-in" style="animation-delay:260ms">
+        <a href="https://github.com/samadmd786/nucleuscloud" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg font-code text-xs font-semibold hover:brightness-110 transition-all duration-200">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <div class="flex md:hidden items-center gap-6 mb-10 hero-in" style="animation-delay:340ms">
+        <a href="#architecture" class="font-code text-[11px] text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Architecture</a>
+        <span class="text-white/15 font-code text-xs">·</span>
+        <a href="#how-it-works" class="font-code text-[11px] text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>How it works</a>
+        <span class="text-white/15 font-code text-xs">·</span>
+        <a href="#tech-stack" class="font-code text-[11px] text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Technologies</a>
+      </div>
+      <div class="flex flex-wrap gap-8 hero-in" style="animation-delay:380ms">
+        <div>
+          <div class="font-syne text-2xl font-bold text-primary" data-count="1">1</div>
+          <div class="font-code text-[10px] uppercase tracking-wider text-on-surface-variant mt-0.5">CloudFormation Template</div>
+        </div>
+        <div class="w-px bg-surface-variant/60"></div>
+        <div>
+          <div class="font-syne text-2xl font-bold text-primary" data-count="10">10</div>
+          <div class="font-code text-[10px] uppercase tracking-wider text-on-surface-variant mt-0.5">AWS Services</div>
+        </div>
+        <div class="w-px bg-surface-variant/60"></div>
+        <div>
+          <div class="font-syne text-2xl font-bold text-primary">0</div>
+          <div class="font-code text-[10px] uppercase tracking-wider text-on-surface-variant mt-0.5">Manual Infra Steps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="border-b border-outline-variant px-4 sm:px-6 py-14 sm:py-20" style="scroll-margin-top:80px">
+    <div class="max-w-container mx-auto">
+      <div class="font-code text-primary text-[11px] uppercase tracking-[0.2em] mb-2">System Design</div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold mb-10">Architecture</h2>
+
+      <div class="glass-panel rounded-2xl p-4 sm:p-8 overflow-x-auto">
+        <svg viewBox="0 0 860 582" xmlns="http://www.w3.org/2000/svg" class="w-full" style="min-width:640px">
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="rgba(0,48,135,0.6)"/>
+            </marker>
+            <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="rgba(0,156,222,0.6)"/>
+            </marker>
+            <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="rgba(52,211,153,0.6)"/>
+            </marker>
+            <marker id="arrow-yellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="rgba(251,191,36,0.6)"/>
+            </marker>
+          </defs>
+
+          <!-- User Browser -->
+          <rect x="340" y="12" width="180" height="46" rx="8" class="arch-node"/>
+          <text x="430" y="38" class="arch-label">User Browser</text>
+
+          <!-- EC2 Web boundary -->
+          <rect x="228" y="86" width="404" height="76" rx="9" fill="rgba(0,48,135,0.04)" stroke="rgba(0,48,135,0.2)" stroke-width="1.2" stroke-dasharray="5,3"/>
+          <text x="430" y="98" class="arch-sublabel" style="fill:#003087;font-size:8px;letter-spacing:0.14em">EC2 INSTANCE · WEB</text>
+          <rect x="244" y="100" width="372" height="56" rx="8" class="arch-node"/>
+          <text x="430" y="122" class="arch-label">Flask App</text>
+          <text x="430" y="138" class="arch-sublabel">Jinja2 · REST API · PostgreSQL RDS</text>
+
+          <!-- Globus Auth -->
+          <rect x="42" y="100" width="152" height="56" rx="8" class="arch-node-cyan"/>
+          <text x="118" y="122" class="arch-label" style="fill:#009cde">Globus Auth</text>
+          <text x="118" y="138" class="arch-sublabel">Federated Identity</text>
+
+          <!-- Stripe -->
+          <rect x="666" y="100" width="152" height="56" rx="8" class="arch-node-green"/>
+          <text x="742" y="122" class="arch-label" style="fill:#15803d">Stripe</text>
+          <text x="742" y="138" class="arch-sublabel">Billing · Tiers</text>
+
+          <!-- S3 -->
+          <rect x="228" y="198" width="300" height="52" rx="8" class="arch-node-green"/>
+          <text x="378" y="220" class="arch-label" style="fill:#15803d">Amazon S3</text>
+          <text x="378" y="236" class="arch-sublabel">Presigned Upload · Storage · Results</text>
+
+          <!-- DynamoDB -->
+          <rect x="578" y="198" width="240" height="52" rx="8" class="arch-node"/>
+          <text x="698" y="220" class="arch-label">DynamoDB</text>
+          <text x="698" y="236" class="arch-sublabel">Job Status · User Metadata</text>
+
+          <!-- SQS -->
+          <rect x="218" y="296" width="142" height="46" rx="8" class="arch-node"/>
+          <text x="289" y="323" class="arch-label">SQS Queue</text>
+
+          <!-- SNS -->
+          <rect x="390" y="296" width="142" height="46" rx="8" class="arch-node"/>
+          <text x="461" y="323" class="arch-label">SNS Topic</text>
+
+          <!-- Step Functions -->
+          <rect x="578" y="296" width="240" height="108" rx="8" fill="rgba(0,48,135,0.05)" stroke="rgba(0,48,135,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="698" y="314" class="arch-label" style="font-size:10px;fill:#003087">Step Functions</text>
+          <rect x="592" y="322" width="212" height="24" rx="5" fill="rgba(255,255,255,0.9)" stroke="rgba(0,48,135,0.25)" stroke-width="1"/>
+          <text x="698" y="337" class="arch-sublabel" style="fill:#687173">1. Validate checksum</text>
+          <rect x="592" y="352" width="212" height="24" rx="5" fill="rgba(255,255,255,0.9)" stroke="rgba(0,48,135,0.25)" stroke-width="1"/>
+          <text x="698" y="367" class="arch-sublabel" style="fill:#687173">2. Process + index</text>
+          <rect x="592" y="382" width="212" height="24" rx="5" fill="rgba(255,255,255,0.9)" stroke="rgba(0,48,135,0.25)" stroke-width="1"/>
+          <text x="698" y="397" class="arch-sublabel" style="fill:#15803d">3. Archive to Glacier</text>
+
+          <!-- EC2 Ann boundary -->
+          <rect x="42" y="412" width="234" height="72" rx="9" fill="rgba(0,156,222,0.04)" stroke="rgba(0,156,222,0.25)" stroke-width="1.2" stroke-dasharray="5,3"/>
+          <text x="159" y="425" class="arch-sublabel" style="fill:#009cde;font-size:8px;letter-spacing:0.14em">EC2 INSTANCE · ANN</text>
+          <rect x="56" y="432" width="206" height="42" rx="6" fill="rgba(255,255,255,0.95)" stroke="rgba(0,156,222,0.35)" stroke-width="1.2"/>
+          <text x="159" y="449" class="arch-label" style="font-size:10px;fill:#009cde">VCF Analyzer</text>
+          <text x="159" y="463" class="arch-sublabel">SQS-driven · pipeline/</text>
+
+          <!-- EC2 Util boundary -->
+          <rect x="294" y="412" width="256" height="72" rx="9" fill="rgba(0,156,222,0.04)" stroke="rgba(0,156,222,0.25)" stroke-width="1.2" stroke-dasharray="5,3"/>
+          <text x="422" y="425" class="arch-sublabel" style="fill:#009cde;font-size:8px;letter-spacing:0.14em">EC2 INSTANCE · UTIL</text>
+          <!-- Archiver -->
+          <rect x="306" y="432" width="72" height="42" rx="5" fill="rgba(255,255,255,0.95)" stroke="rgba(0,156,222,0.35)" stroke-width="1.2"/>
+          <text x="342" y="449" class="arch-label" style="font-size:9px;fill:#009cde">Archiver</text>
+          <text x="342" y="463" class="arch-sublabel">SNS</text>
+          <!-- Notifier -->
+          <rect x="386" y="432" width="72" height="42" rx="5" fill="rgba(255,255,255,0.95)" stroke="rgba(0,156,222,0.35)" stroke-width="1.2"/>
+          <text x="422" y="449" class="arch-label" style="font-size:9px;fill:#009cde">Notifier</text>
+          <text x="422" y="463" class="arch-sublabel">SQS · SES</text>
+          <!-- Retriever -->
+          <rect x="466" y="432" width="76" height="42" rx="5" fill="rgba(255,255,255,0.95)" stroke="rgba(0,156,222,0.35)" stroke-width="1.2"/>
+          <text x="504" y="449" class="arch-label" style="font-size:9px;fill:#009cde">Retriever</text>
+          <text x="504" y="463" class="arch-sublabel">SQS</text>
+
+          <!-- Lambda Restorer -->
+          <rect x="578" y="412" width="240" height="72" rx="8" class="arch-node-cyan"/>
+          <text x="698" y="440" class="arch-label" style="fill:#009cde">Lambda: Restorer</text>
+          <text x="698" y="456" class="arch-sublabel">Copies thawed data</text>
+          <text x="698" y="470" class="arch-sublabel">Glacier → hot S3</text>
+
+          <!-- SES -->
+          <rect x="42" y="502" width="194" height="46" rx="8" fill="rgba(255,255,255,0.95)" stroke="rgba(251,191,36,0.4)" stroke-width="1.5"/>
+          <text x="139" y="522" class="arch-label" style="fill:#fbbf24">AWS SES</text>
+          <text x="139" y="537" class="arch-sublabel">Email Notifications</text>
+
+          <!-- Glacier -->
+          <rect x="578" y="502" width="240" height="46" rx="8" class="arch-node-green"/>
+          <text x="698" y="522" class="arch-label" style="fill:#15803d">S3 Glacier</text>
+          <text x="698" y="537" class="arch-sublabel">Cold Storage · Long-term Archive</text>
+
+          <!-- CloudFormation banner -->
+          <rect x="30" y="560" width="800" height="22" rx="5" fill="rgba(0,48,135,0.05)" stroke="rgba(0,48,135,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="430" y="574" class="arch-sublabel" style="fill:#003087;font-size:10px">CloudFormation - S3 · Glacier · SQS · SNS · Lambda · Step Functions · SES · DynamoDB · EC2 · RDS · CloudWatch</text>
+
+          <!-- Arrows -->
+          <!-- User → Flask -->
+          <line x1="430" y1="58" x2="430" y2="98" class="arch-arrow"/>
+          <!-- Flask ← Globus -->
+          <line x1="244" y1="121" x2="196" y2="121" class="arch-arrow-cyan"/>
+          <!-- Flask → Stripe -->
+          <line x1="616" y1="121" x2="664" y2="121" class="arch-arrow" style="stroke:rgba(52,211,153,0.5);marker-end:url(#arrow-green)"/>
+          <!-- Flask → S3 -->
+          <line x1="400" y1="156" x2="360" y2="196" class="arch-arrow"/>
+          <!-- Flask → DynamoDB -->
+          <line x1="616" y1="138" x2="660" y2="196" class="arch-arrow"/>
+          <!-- S3 → SQS -->
+          <line x1="308" y1="250" x2="275" y2="294" class="arch-arrow"/>
+          <!-- S3 → SNS -->
+          <line x1="450" y1="250" x2="450" y2="294" class="arch-arrow"/>
+          <!-- SQS → EC2 Ann (VCF Analyzer) -->
+          <line x1="262" y1="342" x2="170" y2="410" class="arch-arrow"/>
+          <!-- SNS → EC2 Util Archiver -->
+          <line x1="432" y1="342" x2="352" y2="410" class="arch-arrow"/>
+          <!-- SNS → EC2 Util Notifier -->
+          <line x1="468" y1="342" x2="425" y2="410" class="arch-arrow"/>
+          <!-- SNS → Step Functions -->
+          <line x1="530" y1="311" x2="576" y2="324" class="arch-arrow"/>
+          <!-- Step Functions → Lambda Restorer -->
+          <line x1="698" y1="404" x2="698" y2="410" class="arch-arrow"/>
+          <!-- Notifier → SES -->
+          <line x1="386" y1="484" x2="236" y2="500" class="arch-arrow" style="stroke:rgba(251,191,36,0.55);marker-end:url(#arrow-yellow)"/>
+          <!-- Lambda Restorer → Glacier -->
+          <line x1="698" y1="484" x2="698" y2="500" class="arch-arrow"/>
+          <!-- Retriever → Glacier (initiates retrieval) -->
+          <line x1="538" y1="468" x2="600" y2="498" class="arch-arrow" style="stroke:rgba(52,211,153,0.45);marker-end:url(#arrow-green)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- End-to-End Flow -->
+  <section id="how-it-works" class="border-b border-outline-variant px-4 sm:px-6 py-14 sm:py-20" style="scroll-margin-top:80px">
+    <div class="max-w-container mx-auto">
+      <div class="font-code text-primary text-[11px] uppercase tracking-[0.2em] mb-2">End-to-End</div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold mb-10">How it works</h2>
+
+      <div class="flex flex-col gap-4">
+        <!-- Step 1 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">1</div>
+          <div>
+            <div class="font-syne font-bold mb-1">EC2 Web - Auth &amp; Tier Check</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">The Flask app on EC2 Web authenticates researchers through Globus Auth - a federated identity system trusted by institutions like NIH and XSEDE. On login, Stripe resolves the user's subscription tier: Basic (150KB VCF upload limit, aggressive 5-minute Glacier archival) or Premium (unlimited file sizes, indefinite hot S3 preservation). Job state is tracked in DynamoDB throughout.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">2</div>
+          <div>
+            <div class="font-syne font-bold mb-1">EC2 Web - Presigned S3 Upload</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">After enforcing the per-tier size limit, Flask generates a presigned S3 URL server-side. The VCF file bytes travel directly from the browser to S3 - the EC2 Web instance never handles file data. This keeps the web server free for API requests regardless of file size, and S3 handles durability and replication automatically.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">3</div>
+          <div>
+            <div class="font-syne font-bold mb-1">EC2 Ann - VCF Analysis</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">The S3 upload event enqueues a message in SQS. The VCF Analyzer worker on EC2 Ann polls this queue, picks up the job, and processes the genomic variant file - running analysis and annotation logic from <span class="font-code text-xs text-secondary">pipeline/</span>. Processed results are written back to S3, and job status is updated in DynamoDB. EC2 Ann scales independently of the web tier.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">4</div>
+          <div>
+            <div class="font-syne font-bold mb-1">EC2 Util - SNS Fan-out to Archiver &amp; Notifier</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Completion triggers an SNS message that fans out to two microservices on EC2 Util. The <strong>Archiver</strong> receives the SNS event and migrates Basic-tier results to S3 Glacier within 5 minutes; Premium results stay in hot S3. The <strong>Notifier</strong> polls a separate SQS queue and emails the researcher via SES on success or failure - completely decoupled from the web and analysis tiers.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">5</div>
+          <div>
+            <div class="font-syne font-bold mb-1">Step Functions Archival Workflow</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">In parallel, SNS triggers a Step Functions state machine for structured archival - but only for objects that meet the Basic-tier lifecycle policy. Premium-tier objects bypass this flow entirely and remain in hot S3 indefinitely. For Basic-tier objects, the three-stage machine runs: (1) Validate - checksum verification and format validation, (2) Process - indexing and metadata extraction, (3) Archive - cold storage migration to S3 Glacier within 5 minutes. Each stage is independently retryable with exponential backoff.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">6</div>
+          <div>
+            <div class="font-syne font-bold mb-1">EC2 Util Retriever + Lambda Restorer - On-demand Retrieval</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">When a researcher requests a previously archived file, the <strong>Retriever</strong> on EC2 Util polls SQS for retrieval jobs and initiates a Glacier batch retrieval. Once Glacier thaws the data, the <strong>Lambda Restorer</strong> function fires - it copies the restored bytes back to hot S3 and returns a presigned download URL. The two-service split keeps long-running Glacier polling off Lambda's execution limits.</p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="glass-panel rounded-xl p-6 flex gap-5 items-start step-card">
+          <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center font-syne font-bold text-primary flex-shrink-0">7</div>
+          <div>
+            <div class="font-syne font-bold mb-1">One-Command Infrastructure</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">All three EC2 instances, IAM roles, S3 buckets, SQS queues, SNS topics, Lambda, Step Functions, DynamoDB tables, and VPC networking are defined in a single CloudFormation <span class="font-code text-xs text-secondary">template.yaml</span>. LocalStack mirrors the full AWS environment locally via <span class="font-code text-xs text-secondary">start_all_local.sh</span>. Moto mocks every AWS service call in unit tests, giving full coverage without cloud spend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech-stack" class="border-b border-outline-variant px-4 sm:px-6 py-14 sm:py-20" style="scroll-margin-top:80px">
+    <div class="max-w-container mx-auto">
+      <div class="font-code text-primary text-[11px] uppercase tracking-[0.2em] mb-2">Stack</div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold mb-8">Technologies</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">Frontend</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Flask</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Jinja2</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Bootstrap</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">jQuery</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">AWS Services</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">S3 + Glacier</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">SQS</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">SNS</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Lambda</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Step Functions</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">SES</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">DynamoDB</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">EC2 Autoscaling</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">CloudWatch</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">Auth + Billing</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Globus Auth</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Stripe</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">OAuth 2.0</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">Infrastructure as Code</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">CloudFormation</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">IAM Roles + Policies</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">Testing + Local Dev</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">LocalStack</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Moto</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Pytest</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl p-5 tech-card">
+          <div class="font-code text-[10px] uppercase tracking-widest text-secondary mb-3">Backend</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Python 3.9+</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">Boto3</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">PostgreSQL RDS</span>
+            <span class="font-code text-[10px] px-2 py-1 rounded border border-outline-variant bg-surface-variant/30 text-on-surface-variant pill-glow">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-outline-variant py-10 bg-surface-container-low">
+  <div class="max-w-container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="font-code text-xs text-on-surface-variant opacity-50">&copy; 2026 Md Samad</div>
+    <a href="../index.html" class="font-code text-xs text-on-surface-variant hover:text-primary transition-colors duration-200">← Back to Portfolio</a>
+  </div>
+</footer>
+
+<script>
+/* Flowing pipeline — NucleusCloud */
+(function () {
+  'use strict';
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero = document.getElementById('hero');
+  var canvas = document.createElement('canvas');
+  canvas.setAttribute('aria-hidden', 'true');
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;';
+  hero.insertBefore(canvas, hero.firstChild);
+  var ctx = canvas.getContext('2d'), streams = [];
+  var COLS = ['52,211,153', '0,156,222', '52,211,153', '34,197,94', '0,156,222'];
+
+  function build() {
+    canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight;
+    streams = [];
+    for (var i = 0; i < 7; i++) {
+      var y = canvas.height * 0.08 + (i / 6) * canvas.height * 0.84;
+      streams.push({ y: y, parts: [], speed: 0.5 + Math.random() * 0.7,
+        col: COLS[i % COLS.length], spawn: Math.floor(Math.random() * 80) });
+    }
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    streams.forEach(function (s) {
+      s.spawn--;
+      if (s.spawn <= 0) {
+        s.parts.push({ x: canvas.width * 0.42, a: 0, sz: Math.random() * 2 + 1.2 });
+        s.spawn = 55 + Math.floor(Math.random() * 70);
+      }
+      ctx.beginPath();
+      ctx.moveTo(canvas.width * 0.42, s.y);
+      ctx.lineTo(canvas.width * 0.98, s.y);
+      ctx.strokeStyle = 'rgba(' + s.col + ',0.07)';
+      ctx.lineWidth = 0.5; ctx.stroke();
+      for (var i = s.parts.length - 1; i >= 0; i--) {
+        var p = s.parts[i];
+        p.x += s.speed;
+        p.a = p.x < canvas.width * 0.55 ? (p.x - canvas.width * 0.42) / (canvas.width * 0.13) : 1;
+        if (p.x > canvas.width * 0.9) p.a = 1 - (p.x - canvas.width * 0.9) / (canvas.width * 0.08);
+        if (p.a <= 0 || p.x > canvas.width) { s.parts.splice(i, 1); continue; }
+        ctx.beginPath(); ctx.arc(p.x, s.y, p.sz, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + s.col + ',' + p.a * 0.75 + ')'; ctx.fill();
+      }
+    });
+    requestAnimationFrame(tick);
+  }
+  build(); tick();
+  window.addEventListener('resize', build);
+}());
+</script>
+<script src="../assets/js/detail.js"></script>
+</body>
+</html>

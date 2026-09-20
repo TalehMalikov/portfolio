@@ -1,0 +1,7 @@
+CLAUDE.md
+env/
+.CLAUDE
+node_modules/
+package.json
+package-lock.json
+.gstack/
