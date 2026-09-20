@@ -1,4 +1,4 @@
-# Md Samad
+# Taleh Malikov
 
 Chicago, IL | (614) 806-0483 | samadmd6020@gmail.com | [md-samad.com](https://md-samad.com) | [linkedin.com/in/md-samad-msu](https://www.linkedin.com/in/md-samad-msu/) | [github.com/samadmd786](https://github.com/samadmd786)
 
