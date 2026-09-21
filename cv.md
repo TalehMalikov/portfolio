@@ -1,6 +1,6 @@
 # Taleh Malikov
 
-Chicago, IL | tmalikov@uchicago.edu | [tmalikov.com](https://tmalikov.com) | [linkedin.com/in/talehmalikov](https://www.linkedin.com/in/talehmalikov/) | [github.com/talehmalikov](https://github.com/talehmalikov)
+Chicago, IL | talehmalikov.dev@gmail.com | [tmalikov.com](https://tmalikov.com) | [linkedin.com/in/talehmalikov](https://www.linkedin.com/in/talehmalikov/) | [github.com/talehmalikov](https://github.com/talehmalikov)
 
 ---
 
