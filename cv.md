@@ -83,7 +83,7 @@ _November 2021 - March 2023_
 - **State Program Scholarship** - full national funding for graduate study abroad, Republic of Azerbaijan, 2025
 - **Bachelor's degree awarded with honors** - 96.96/100, The Academy of Public Administration, 2024
 - **Dean's List, six terms** - The Academy of Public Administration, 2020 - 2024
-- **Technest Scholarship** - Artificial Intelligence program, Code Society IT Center, 2024
+- **Technest Scholarship** - Artificial Intelligence program,  Innovation and Digital Development Agency of Azerbaijan, 2024
 - **Scholarship Program for Talented Youth** - ROOF Academy and BP, 2024 - 2025
 
 ---
